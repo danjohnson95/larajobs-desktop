@@ -7,13 +7,13 @@ use App\Models\JobCreator;
 use App\Models\JobTag;
 use App\Events\JobsPosted;
 use Carbon\Carbon;
-use Config;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Str;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Str;
 use SimpleXMLElement;
 
 class FetchNewJobs implements ShouldQueue

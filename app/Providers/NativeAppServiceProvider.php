@@ -2,13 +2,13 @@
 
 namespace App\Providers;
 
-use Config;
 use Native\Laravel\Enums\RolesEnum;
 use Native\Laravel\Facades\GlobalShortcut;
 use Native\Laravel\Facades\MenuBar;
 use Native\Laravel\Facades\Window;
 use Native\Laravel\Menu\Items\Role;
 use Native\Laravel\Menu\Menu;
+use Illuminate\Support\Facades\Config;
 
 class NativeAppServiceProvider
 {
@@ -34,9 +34,9 @@ class NativeAppServiceProvider
         );
 
         // @TODO: Figure out why this doesn't work
-        GlobalShortcut::key('CmdOrCtrl+Shift+J')
-            ->event(\App\Events\HandleGlobalShortcutRefresh::class)
-            ->register();
+        // GlobalShortcut::key('CmdOrCtrl+Shift+J')
+        //     ->event(\App\Events\HandleGlobalShortcutRefresh::class)
+        //     ->register();
 
         // For debugging
         if (Config::get('app.debug', false)) {
