@@ -1,10 +1,10 @@
-name: Style enforcer
+name: Static analysis
 
 on:
   pull_request:
 
 jobs:
-  style:
+  phpstan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,4 +17,4 @@ jobs:
           tools: phpstan
 
       - name: Run phpcs
-        run: phpstan analyse src
+        run: phpstan analyse app
